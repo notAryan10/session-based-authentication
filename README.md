@@ -35,12 +35,30 @@ You only need to **implement the following routes** inside `server.js`:
 npm install
 ```
 
-1️⃣ **To start the server**
+2️⃣ **To start the server**
 ```bash
 npm run dev
 ```
 
-1️⃣ **To test code**
+3️⃣ **To test code**
 ```bash
 npm test
+```
+
+
+## ⚡ Express-session syntax :
+
+1️⃣ **Creating Session**
+```js
+req.session.user = { username };
+```
+
+2️⃣ **Destroying Session**
+```js
+req.session.destroy(err => {
+    if (err) {
+      return res.status(500).json({ message: "Logout failed" });
+    }
+    res.clearCookie("connect.sid");
+})
 ```
