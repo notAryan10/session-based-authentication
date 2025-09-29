@@ -5,8 +5,7 @@ In this exercise, you’ll implement **basic session-based authentication** in E
 
 ---
 
-## 📌 What You Need to Do
-You only need to **implement the following routes** inside `server.js`:
+## 📌 What You Need to DoYou only need to **implement the following routes** inside `server.js`:
 
 1. **`POST /login`**
    - Accepts `{ username, password }`
@@ -22,7 +21,7 @@ You only need to **implement the following routes** inside `server.js`:
    - Else
      - ❌ Respond with **401 → { message: "Unauthorized" }**
 
-3. **`POST /logout`**
+3. **`GET /logout`**
    - Destroy the session
    - ✅ Respond with **200 → { message: "Logout successful" }**
 
