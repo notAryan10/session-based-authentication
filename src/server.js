@@ -10,7 +10,7 @@ app.use(
     secret: "mysecretkey", // normally from env
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }, // secure: true only with https
+    cookie: { secure: false, maxAge: 1*24*60*60*1000 }, // secure: true only with https
   })
 );
 
@@ -27,9 +27,9 @@ app.get("/profile", (req, res) => {
 });
 
 // Logout route
-app.get("/logout", (req, res) => {
+app.post("/logout", (req, res) => {
   // Write your code here
-
+  
 });
 
 // Start server only if not in test mode

@@ -21,7 +21,7 @@ In this exercise, you’ll implement **basic session-based authentication** in E
    - Else
      - ❌ Respond with **401 → { message: "Unauthorized" }**
 
-3. **`GET /logout`**
+3. **`POST /logout`**
    - Destroy the session
    - ✅ Respond with **200 → { message: "Logout successful" }**
 
